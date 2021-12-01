@@ -6,6 +6,15 @@ module.exports = (app) => {
         dao.createPerson(req.body)
             .then((insertedPerson) => res.json(insertedPerson));
 
-    app.post("/db/person/service", createPerson);
+    const updateProfile = (req, res) =>
+        dao.updateProfile(req.params.id, req.body)
+            .then(status => res.send(status));
 
+    const findProfileById = (req, res) =>
+        dao.findProfileById(req.params.id)
+            .then(profile => res.json(profile));
+
+    app.post("/db/person", createPerson);
+    app.get("/db/person/:id", findProfileById);
+    app.put('/db/person/:id', updateProfile);
 }
