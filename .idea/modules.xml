@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectModuleManager">
@@ -5,4 +6,13 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/travel-scraps-node.iml" filepath="$PROJECT_DIR$/.idea/travel-scraps-node.iml" />
     </modules>
   </component>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/travel-scraps-node.iml" filepath="$PROJECT_DIR$/.idea/travel-scraps-node.iml" />
+    </modules>
+  </component>
+>>>>>>> 57bc484b4add58889dd5d02ad28d2744941d6ed9
 </project>
