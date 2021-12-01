@@ -30,4 +30,3 @@ app.listen(5000);
 require('./db/countdown/service')(app);
 require('./db/who/who-service')(app);
 
-app.listen(5000);
