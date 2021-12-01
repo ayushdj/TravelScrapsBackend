@@ -5,6 +5,14 @@ const schema = new mongoose.Schema({
     username: String,
     email: String,
     password: String,
-    dateOfBirth: Date
+    dateOfBirth: {type: Date, defaultValue: Date.now},
+    bio : {type:String, defaultValue:""},
+    website : {type: String, defaultValue: ""},
+    profileImage : {type: String, defaultValue: "../../../images/profile-default.png"},
+    bannerImage : {type: String, defaultValue: "../../../images/banner-default.jpg"},
+    location: {type: String, defaultValue: ""},
+    dateJoined: {type:Date, defaultValue:Date.now},
+    followingCount: {type: Number, defaultValue: 0},
+    followersCount:{type: Number, defaultValue: 0},
 }, {collection: 'persons'});
 module.exports = schema;

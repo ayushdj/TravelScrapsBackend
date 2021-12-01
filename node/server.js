@@ -22,6 +22,5 @@ app.use(function(req, res, next) {
 
 
 require('./db/carousel/service')(app);
-//require('./db/persons/service')(app);
+require('./db/signUp/service')(app);
 app.listen(5000);
-
