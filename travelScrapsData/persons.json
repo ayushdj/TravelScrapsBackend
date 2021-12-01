@@ -53,4 +53,20 @@
     "61943448601daea7ccd0d7c8"
   ],
   "scrapbooks": []
+},{
+  "_id": {
+    "$oid": "61a2a6006d05d5143f2e0acc"
+  },
+  "firstName": "Ayush",
+  "lastName": "fjwdkwjndwjkdnawjkdwaNjkdwA",
+  "handle": "ayushdj",
+  "profilePicture": "../../../images/profilePic.png",
+  "bannerPicture": "../../../images/coverPhoto.png",
+  "bio": "This is a newer bio",
+  "website": "youtube.com/webdevtv",
+  "location": "idk man",
+  "dateOfBirth": "February 13, 1997",
+  "dateJoined": "June 2013",
+  "followingCount": 69,
+  "followersCount": 420
 }]
