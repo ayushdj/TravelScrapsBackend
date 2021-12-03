@@ -22,12 +22,9 @@ app.use(function(req, res, next) {
 
 
 require('./db/carousel/service')(app);
-
 require('./db/signUp/service')(app);
 //require('./db/persons/service')(app);
 require('./db/countdown/service')(app);
 require('./db/who/who-service')(app);
-
-
 
 app.listen(4000);
