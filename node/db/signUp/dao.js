@@ -11,10 +11,13 @@ const updateProfile = (id, newProfile) =>
 const findProfileById = (id) =>
     model.findById(id);
 
+const findProfileByUsername = (username, password) =>
+    model.find({userName: username, password: password});
+
 // delete profile
 const deleteProfileById = (id) =>
     model.deleteOne({_id:id});
 
 module.exports = {
-    createPerson, updateProfile, findProfileById, deleteProfileById
+    createPerson, updateProfile, findProfileById, findProfileByUsername, deleteProfileById
 };

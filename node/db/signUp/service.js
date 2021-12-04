@@ -14,7 +14,13 @@ module.exports = (app) => {
         dao.findProfileById(req.params.id)
             .then(profile => res.json(profile));
 
+    const findProfileByUsername = (req, res) =>
+        dao.findProfileByUsername(req.params.username, req.params.password)
+            .then(profile => res.json(profile[0]));
+
+
     app.post("/db/person", createPerson);
     app.get("/db/person/:id", findProfileById);
     app.put('/db/person/:id', updateProfile);
+    app.get("/db/person/:username/:password", findProfileByUsername);
 }
