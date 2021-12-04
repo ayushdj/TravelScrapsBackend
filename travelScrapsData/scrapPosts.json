@@ -4,12 +4,10 @@
   },
   "title": "Boston trip review",
   "location": "Boston",
-  "tags": [
-    "boston",
-    "cool"
-  ],
-  "text": "This was such an amazing trip!",
+  "tags": ["boston", "cool"],
+  "text": "This was such an amazing trip! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   "travelPlan": "61943088601daea7ccd0d7c4",
-  "images": [],
-  "comments": []
+  "images": ["https://cdn.citywonders.com/media/17764/rome-city.jpg?anchor=center&mode=crop&width=1200&height=600", "https://www.commonwealthfund.org/sites/default/files/styles/countries_hero_desktop/public/country_image_Sweden.jpg?h=7115b1d8&itok=Cr7aTYFE"],
+  "comments": ["Lorem Ipsum dolor sit amet", "Nice! Glad you had fun!"],
+  "userName": "ayushdj"
 }]
