@@ -57,16 +57,22 @@
   "_id": {
     "$oid": "61a2a6006d05d5143f2e0acc"
   },
-  "firstName": "Ayush",
-  "lastName": "fjwdkwjndwjkdnawjkdwaNjkdwA",
-  "handle": "ayushdj",
-  "profilePicture": "../../../images/profilePic.png",
-  "bannerPicture": "../../../images/coverPhoto.png",
+  "firstName": "djiojeiodjasiodjiodjsiojeiofwefese",
+  "lastName": "Something new",
+  "handle": "kennedyM",
+  "profilePicture": "../../../images/profile-default.png",
+  "bannerPicture": "../../../images/banner-default.jpg",
   "bio": "This is a newer bio",
   "website": "youtube.com/webdevtv",
   "location": "idk man",
-  "dateOfBirth": "February 13, 1997",
-  "dateJoined": "June 2013",
+  "dateOfBirth": {
+    "$date": "1997-02-13T05:00:00.000Z"
+  },
+  "dateJoined": {
+    "$date": "2013-06-01T04:00:00.000Z"
+  },
   "followingCount": 69,
-  "followersCount": 420
+  "followersCount": 420,
+  "emailAddress": "dhananjai.a@northeastern.edu",
+  "password": "blahblah"
 }]

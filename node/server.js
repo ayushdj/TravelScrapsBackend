@@ -29,5 +29,6 @@ require('./db/who/who-service')(app);
 require('./db/scrapPosts/service')(app);
 require('./db/calendar/service')(app);
 require('./db/events/service')(app);
+require('./db/comments/service')(app)
 
 app.listen(4000);
