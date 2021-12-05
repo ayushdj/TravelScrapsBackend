@@ -2,6 +2,14 @@
   "_id": {
     "$oid": "61943448601daea7ccd0d7c8"
   },
-  "user": "61942c53601daea7ccd0d7c3",
-  "text": "ohhhh you had such a great time"
+  "text": "ohhhh you had such a great time",
+  "person": "61a2a6006d05d5143f2e0acc",
+  "post": "619433dc601daea7ccd0d7c7"
+}, {
+  "_id": {
+    "$oid": "61ad2e9b58196ac787c0e984"
+  },
+  "text": "wow looked like so much fun!",
+  "person": "61a2a6006d05d5143f2e0acc",
+  "post": "619433dc601daea7ccd0d7c7"
 }]
