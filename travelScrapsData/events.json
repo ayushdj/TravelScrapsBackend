@@ -2,7 +2,18 @@
   "_id": {
     "$oid": "619430fa601daea7ccd0d7c5"
   },
-  "date": "12/21/21",
-  "eventName": "Boston vacation",
-  "travelPlan": "61943088601daea7ccd0d7c4"
+  "date": "2021-12-21",
+  "title": "Boston vacation"
+},{
+  "_id": {
+    "$oid": "61ac63468f5359a216c574bb"
+  },
+  "title": "Hawaii",
+  "date": "2021-12-31"
+},{
+  "_id": {
+    "$oid": "61ad01138f5359a216c574c4"
+  },
+  "title": "New York",
+  "date": "2021-12-03"
 }]
