@@ -27,5 +27,7 @@ require('./db/signUp/service')(app);
 require('./db/countdown/service')(app);
 require('./db/who/who-service')(app);
 require('./db/scrapPosts/service')(app);
+require('./db/calendar/service')(app);
+require('./db/events/service')(app);
 
 app.listen(4000);
