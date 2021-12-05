@@ -6,6 +6,10 @@ const findCountCalendarByPersonId = (id) =>
 const createCalendar = (calendar) =>
     model.create(calendar);
 
+const updateCalendar = (id, newCalendar) =>
+    model.updateOne({_id: id},
+        {$set: newCalendar});
+
 module.exports = {
-    findCountCalendarByPersonId, createCalendar
+    findCountCalendarByPersonId, createCalendar, updateCalendar
 };

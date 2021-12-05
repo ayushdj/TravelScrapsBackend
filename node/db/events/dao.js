@@ -2,8 +2,8 @@ const model = require('./model');
 
 const findAllEvent = () => model.find();
 
-const deleteEvent = (id) =>
-    model.deleteOne({_id: id});
+const deleteEvent = (id) => {
+    return model.deleteOne({_id: id})};
 
 const createEvent = (event) =>
     model.create(event);

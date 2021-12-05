@@ -10,7 +10,12 @@ module.exports = (app) => {
         dao.createCalendar(req.body)
             .then((insertedCalendar) => res.json(insertedCalendar));
 
+    const updateCalendar = (req, res) =>
+        dao.updateCalendar(req.params.id, req.body)
+            .then(status => res.send(status));
+
     app.post("/db/calendar", createCalendar);
-    
     app.get("/db/calendar/:id", findCountCalendarByPersonId);
+    app.put("/db/calendar/:id", updateCalendar);
+
 }
