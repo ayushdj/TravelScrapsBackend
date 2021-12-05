@@ -2,8 +2,10 @@
   "_id": {
     "$oid": "61943171601daea7ccd0d7c6"
   },
-  "date": "12/21/21",
   "events": [
-    "619430fa601daea7ccd0d7c5"
-  ]
+    "619430fa601daea7ccd0d7c5",
+    "61ac63468f5359a216c574bb",
+    "61ad01138f5359a216c574c4"
+  ],
+  "person": "61942b8b601daea7ccd0d7c1"
 }]
