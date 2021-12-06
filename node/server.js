@@ -5,9 +5,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/travelScraps');
-
-
+const uri = "mongodb+srv://travelscraps:travelscraps@cluster0.vtkeo.mongodb.net/travelScraps?retryWrites=true&w=majority";
+mongoose.connect(uri);
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -31,4 +30,4 @@ require('./db/calendar/service')(app);
 require('./db/events/service')(app);
 require('./db/comments/service')(app)
 
-app.listen(4000);
+app.listen(process.env.PORT || 4000);
