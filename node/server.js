@@ -28,8 +28,6 @@ mongoose.connect(uri);
 
 require('./db/carousel/service')(app);
 require('./db/signUp/service')(app);
-//require('./db/persons/service')(app);
-
 require('./db/countdown/service')(app);
 require('./db/who/who-service')(app);
 require('./db/scrapPosts/service')(app);
