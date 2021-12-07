@@ -56,14 +56,13 @@ module.exports = (app) => {
     const logout = (req, res) =>
         res.send(req.session.destroy());
 
-    app.post('/api/login', login);
-    app.post('/api/register', register);
-    app.post('/api/currUser', getCurrentUser);
-    app.post('/api/logout', logout);
+    // app.post('/api/login', login);
+    // app.post('/api/register', register);
+    // app.post('/api/currUser', getCurrentUser);
+    // app.post('/api/logout', logout);
 
     app.post("/db/person", createPerson);
     app.get("/db/person/:id", findProfileById);
     app.put('/db/person/:id', updateProfile);
     app.get("/db/person/:username/:password", findProfileByUsername);
-    app.get
 }
