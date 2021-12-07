@@ -37,5 +37,6 @@ require('./db/calendar/service')(app);
 require('./db/events/service')(app);
 require('./db/comments/service')(app);
 require('./db/users/user-controller')(app);
+require('./db/weather/service')(app);
 
 app.listen(process.env.PORT || 4000);
