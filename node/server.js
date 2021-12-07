@@ -28,6 +28,7 @@ require('./db/who/who-service')(app);
 require('./db/scrapPosts/service')(app);
 require('./db/calendar/service')(app);
 require('./db/events/service')(app);
-require('./db/comments/service')(app)
+require('./db/comments/service')(app);
+require('./db/weather/service')(app);
 
 app.listen(process.env.PORT || 4000);
