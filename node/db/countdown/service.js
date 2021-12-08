@@ -14,4 +14,11 @@ module.exports = (app) => {
 
     app.get("/db/countdown/service/:id", findCountDownById);
 
+    const createCountDown = (req, res) =>
+        dao.createCountDown(req.body)
+            .then((countdown) => res.json(countdown));
+
+    app.post("/db/countdown/service", createCountDown);
+
+
 }
