@@ -5,7 +5,10 @@ const updateCountDown = (id, date) =>
         {$set: date});
 
 const findCountDownById = (id) =>
-    model.findById(id);
+    model.find({
+
+        person: id
+    });
 
 module.exports = {
     updateCountDown,
