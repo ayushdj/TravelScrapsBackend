@@ -1,10 +1,11 @@
 const userModel = require('./user-model');
 
-const findAllUsers = () =>
-  userModel.find();
+const findAllUsers = () => {
+    return userModel.find()
+};
 
 const findUserById = (userId) =>
-  userModel.findById(userId);
+  userModel.findOne({_id : userId});
 
 const findByUsernameAndPassword = ({username, password}) =>
   userModel.findOne({username, password});

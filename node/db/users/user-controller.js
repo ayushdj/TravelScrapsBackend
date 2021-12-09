@@ -3,11 +3,15 @@ const userDao = require('./user-dao');
 module.exports = (app) => {
   const findAllUsers = (req, res) =>
     userDao.findAllUsers()
-      .then(users => res.json(users));
+      .then(users => {
+          return res.json(users)
+      });
 
   const findUserById = (req, res) =>
     userDao.findUserById(req.params.user)
-      .then(user => res.json(user));
+      .then(user => {
+          return res.json(user)
+      });
 
   const deleteUser = (req, res) =>
     userDao.deleteUser(req.params.user)
