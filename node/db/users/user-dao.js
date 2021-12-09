@@ -6,11 +6,11 @@ const findAllUsers = () =>
 const findUserById = (userId) =>
   userModel.findById(userId);
 
-const findByUsernameAndPassword = ({username, password}) =>
-  userModel.findOne({username, password});
+const findByUsernameAndPassword = ({userName, password}) =>
+  userModel.findOne({userName, password});
 
-const findByUsername = ({username}) =>
-  userModel.findOne({username});
+const findByUsername = ({userName}) =>
+  userModel.findOne({userName});
 
 const createUser = (user) =>
   userModel.create(user);

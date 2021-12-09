@@ -1,4 +1,6 @@
 const userDao = require('./user-dao');
+const calendarDao = require(`../calendar/dao`)
+const countdownDao = require(`../countdown/dao`)
 
 module.exports = (app) => {
   const findAllUsers = (req, res) =>
@@ -31,7 +33,7 @@ module.exports = (app) => {
 
   const register = (req, res) => {
     userDao.findByUsername(req.body)
-      .then(user => {
+      .then((user) => {
         if(user) {
           res.sendStatus(404);
           return;
@@ -39,8 +41,7 @@ module.exports = (app) => {
         userDao.createUser(req.body)
           .then(user => {
             req.session['profile'] = user;
-            res.json(user)
-          });
+            res.json(user)})
       })
   }
 
