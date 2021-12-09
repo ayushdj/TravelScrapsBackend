@@ -1,5 +1,34 @@
 const express = require('express');
+//const cors = require("cors");
+//const fileUpload = require('express-fileupload');
 const app = express();
+//const initRoutes = require("./db/images/routes/index");
+
+// const corsOptions = {
+//     origin: "http://localhost:8081"
+// };
+
+// app.use(cors(corsOptions));
+// app.use(express.urlencoded({ extended: true }));
+// initRoutes(app);
+
+
+// app.post('/upload', (req, res) => {
+//     if (req.files === null) {
+//         return res.status(400).json({ msg: 'No file uploaded' });
+//     }
+//
+//     const file = req.files.file;
+//
+//     file.mv(`${__dirname}/client/public/uploads/${file.name}`, err => {
+//         if (err) {
+//             console.error(err);
+//             return res.status(500).send(err);
+//         }
+//
+//         res.json({ fileName: file.name, filePath: `/uploads/${file.name}` });
+//     });
+// });
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", 'http://localhost:3000');
@@ -10,6 +39,8 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Credentials", "true");
     next();
 });
+
+
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -36,5 +67,6 @@ require('./db/events/service')(app);
 require('./db/comments/service')(app);
 require('./db/users/user-controller')(app);
 require('./db/weather/service')(app);
+//require('./db/images/')
 
 app.listen(process.env.PORT || 4000);
