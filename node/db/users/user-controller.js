@@ -31,7 +31,7 @@ module.exports = (app) => {
       })
   }
 
-  const register = (req, res) => {
+  const register = async (req, res) => {
     userDao.findByUsername(req.body)
       .then((user) => {
         if(user) {
@@ -41,6 +41,8 @@ module.exports = (app) => {
         userDao.createUser(req.body)
           .then(user => {
             req.session['profile'] = user;
+            calendarDao.createCalendar({events: [], person: user._id})
+            countdownDao.createCountDown({person: user._id, date: ""})
             res.json(user)})
       })
   }
