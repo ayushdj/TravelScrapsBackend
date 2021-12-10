@@ -29,23 +29,6 @@ module.exports = (app) => {
         res.send(req.session);
     }
 
-
-  const register = async (req, res) => {
-    userDao.findByUsername(req.body)
-      .then((user) => {
-        if(user) {
-          res.sendStatus(404);
-          return;
-        }
-        userDao.createUser(req.body)
-          .then(user => {
-            req.session['profile'] = user;
-            calendarDao.createCalendar({events: [], person: user._id})
-            countdownDao.createCountDown({person: user._id, date: ""})
-            res.json(user)})
-      })
-  }
-
     const login = (req, res) => {
         userDao.findByUsernameAndPassword(req.body)
             .then(user => {
