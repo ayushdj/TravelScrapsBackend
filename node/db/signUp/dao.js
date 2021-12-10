@@ -11,6 +11,9 @@ const updateProfile = (id, newProfile) =>
 const findProfileById = (id) =>
     model.findById(id);
 
+const findByType = (type) =>
+    model.find({type: type})
+
 // const findProfileByUsername = (username, password) =>
 //     model.find({userName: username, password: password});
 
@@ -25,5 +28,5 @@ const deleteProfileById = (id) =>
 
 
 module.exports = {
-    createPerson, updateProfile, findProfileById, findProfileByUsername, deleteProfileById
+    createPerson, updateProfile, findProfileById, findProfileByUsername, deleteProfileById, findByType
 };

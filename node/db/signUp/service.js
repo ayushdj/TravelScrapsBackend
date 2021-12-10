@@ -14,6 +14,11 @@ module.exports = (app) => {
         dao.findProfileById(req.params.id)
             .then(profile => res.json(profile));
 
+    const findByType = (req, res) =>
+        dao.findByType(req.params.type)
+            .then(profileList => res.json(profileList))
+            .catch(error => res.send(error))
+
     // const findProfileByUsername = (req, res) =>
     //     dao.findProfileByUsername(req.params.username, req.params.password)
     //         .then(profile => res.json(profile[0]));
@@ -36,4 +41,6 @@ module.exports = (app) => {
     app.put('/db/person/:id', updateProfile);
     app.get("/db/person/:username/:password", findProfileByUsername);
     app.delete("/db/person/:id", deleteProfile)
+
+    app.get("/db/type/:type", findByType);
 }
