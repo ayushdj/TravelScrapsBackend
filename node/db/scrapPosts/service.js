@@ -1,5 +1,6 @@
 const dao = require('./dao');
 
+
 module.exports = (app) => {
 
     const createPost = (req, res) =>

@@ -1,8 +1,24 @@
 const express = require('express');
-//const cors = require("cors");
+const cors = require("cors");
 //const fileUpload = require('express-fileupload');
 const app = express();
 //const initRoutes = require("./db/images/routes/index");
+
+const api = require('./db/fileUpload/image.routes')
+
+app.use(cors());
+
+app.use('/public', express.static('public'));
+
+app.use('/api', api);
+
+//app.use(express.json({limit: "30mb",extended:true}));
+//app.use(express.urlencoded({limit: "30mb",extended:true}));
+//app.use(cors())
+//import itemRoutes from './db/imageUpload/items.js';
+//app.use('/items', itemRoutes)
+//app.get('/',(req,res)=>{
+    //res.send('Hello')})
 
 // const corsOptions = {
 //     origin: "http://localhost:8081"
